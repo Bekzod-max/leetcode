@@ -1,0 +1,17 @@
+//551
+
+function checkRecord(s: string): boolean {
+  let sanoq: number = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] == 'A') {
+      sanoq++;
+    }
+    if (i <= s.length - 3 && s[i] == 'L' && s[i + 1] == 'L' && s[i + 2] == 'L') {
+      return false;
+    }
+  }
+  if (sanoq >= 2) {
+    return false;
+  }
+  return true;
+};
